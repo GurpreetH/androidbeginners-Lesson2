@@ -1,14 +1,16 @@
 package com.example.ivany.moviemanager.models;
 
-public class Movie {
+import java.io.Serializable;
 
-    String id;
-    String title;
-    String overview;
-    float voteAveragae;
-    float voteCount;
-    String posterPath;
-    String backdropPath;
+public class Movie implements Serializable{
+
+    private String id;
+    private String title;
+    private String overview;
+    private float voteAveragae;
+    private float voteCount;
+    private String posterPath;
+    private String backdropPath;
 
     public Movie(String id, String title, String overview, float voteAveragae, float voteCount, String posterPath, String backdropPath) {
         this.id = id;
@@ -69,7 +71,7 @@ public class Movie {
     }
 
     public String getBackdropPath() {
-        return backdropPath;
+        return "https://image.tmdb.org/t/p/w780\n"+backdropPath;
     }
 
     public void setBackdropPath(String backdropPath) {
